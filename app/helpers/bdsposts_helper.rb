@@ -1,0 +1,2 @@
+module BdspostsHelper
+end

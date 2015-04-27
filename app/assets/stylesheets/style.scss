@@ -1,0 +1,93 @@
+	@import 'bootstrap-sprockets';
+	@import 'bootstrap';
+
+.pages .sessions .users {
+	html, body {
+	 margin: 0;
+	 padding: 0;
+	 font-family: 'Montserrat', sans-serif;
+	}
+
+	body {
+	 background: url('codeblur.jpg') no-repeat;
+	 background-size: cover;
+	}
+
+	.container {
+	 width: 940px;
+	}
+
+	.header {
+	 text-align: center;
+	}
+
+	.header p {
+	 margin-top: 2em;
+	 padding-bottom: 2em;
+	 border-bottom: 1px solid #fff;
+	}
+
+	.header img {
+	 height: 250px;
+	 width: 225px;
+	}
+
+	.join {
+		margin: auto;
+		text-align: center;
+		font-family: PFDinTextCompPro-Bold;
+	}
+
+	span {
+		color:red;
+	}
+
+	.main {
+	 color: #fff;
+	 padding-top: 25px;
+	 /*margin-bottom: 50px*/
+	}
+
+	.main h1 {
+	 font-size: 50px;
+	 /*margin-bottom: 20px;*/
+	}
+
+	form {
+	 width: 600px;
+	 margin: auto;
+	 margin-bottom: 30px
+
+	}
+
+	.form-control {
+	 border-radius: 0;
+	}
+
+	form button {
+	 background-color: red ;
+	 margin-top: 20px;
+	 padding: 5px 10px;
+	 border: none;
+	}
+
+	.footer .container {
+	 border-top: 1px solid #fff;
+	 padding-top: 20px;
+	 padding-left: 0;
+	}
+
+	.footer ul {
+	 margin-left: 0;
+	 text-align:center;
+	}
+
+	.footer li {
+	 margin-right: 15px;
+	 padding-left: 0;
+	}
+
+	.footer a {
+	 color: #fff;
+	}
+}

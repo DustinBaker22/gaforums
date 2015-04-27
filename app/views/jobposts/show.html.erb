@@ -1,0 +1,12 @@
+<!-- Thread Title -->
+<h1><%= jobpost.title %></h1>
+
+<!-- Description of Thread -->
+<p><%= jobpost.body %></p>
+
+<%= link_to "Edit this thread", edit_jobpost_path(@jobpost) %>
+
+<%= link_to "Delete this thread!",:jobpost, method: :delete, data: {confirm: "Are you sure you want to delete this thread?"} %>
+
+<!-- Provide a link back to our index page -->
+<%= link_to "Go Back", jobposts_path %>

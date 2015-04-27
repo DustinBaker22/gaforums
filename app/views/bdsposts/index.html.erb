@@ -1,0 +1,43 @@
+<!-- Navigation Bar -->
+<nav class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" date-toggle="collapse"data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://generalassemb.ly"><span class="red">G</span>eneral <span class="red">A</span>ssembly</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a href="/boards">Forums</a>
+        </li>
+        <li>
+          <a href="/about">About</a>
+        </li>
+        <li>
+          <a href="/contact">Contact</a>
+        </li>
+        <li><%= link_to "Logout", "/logout" %></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header and Location -->
+<div class="container">
+  <h3><%=link_to "Off-Topic", boards_path %> > <%= link_to "Business Development and Sales", bdsposts_path %><span id="white" class="pull-right"><%= link_to "Create post", new_bdspost_path, class:"btn btn-primary" %></span></h3>
+
+<!-- Threads -->
+  <div class="panel panel-default">
+    <% @bdsposts.each do |bdspost| %>
+      <div class="panel-heading"><%= bdspost.title %><span class="pull-right"><%= link_to "  ", edit_bdspost_path(bdspost), class:"glyphicon glyphicon-pencil" %><span class="spacing"></span><%= link_to "  ", bdspost, method: :delete, data: {confirm: "Are you sure you want to delete this thread?"}, class:"glyphicon glyphicon-trash" %></span></div>
+      <div class="panel-body">
+      <%= bdspost.body %>
+    </div>
+    <% end %>
+  </div>
+</div>

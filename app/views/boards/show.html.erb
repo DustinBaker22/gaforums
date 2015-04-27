@@ -1,0 +1,9 @@
+  <% @threads.each do |thread| %>
+        <table class="col-md-12 table table-hover">
+          <tr class="table">
+            <td><%= image_tag "galogo_thumb.png" %></td>
+            <td><%= link_to board.title %></td><br>
+            <td><%= board.description %></td>
+          </tr>
+        </table>
+<% end %>

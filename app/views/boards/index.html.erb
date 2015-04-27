@@ -1,0 +1,148 @@
+<nav class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" date-toggle="collapse"data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://generalassemb.ly"><span class="red">G</span>eneral <span class="red">A</span>ssembly</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a href="/boards">Forums</a>
+        </li>
+        <li>
+          <a href="/about">About</a>
+        </li>
+        <li>
+          <a href="/contact">Contact</a>
+        </li>
+        <li><%= link_to "Logout", "/logout" %></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <tbody>
+
+
+  <% @boards.each do |board| %>
+        <table class="col-md-12 table table-hover">
+          <tr class="table">
+            <td><%= image_tag "galogo_thumb.png" %></td>
+            <td><%= link_to board.title %><br><%= board.description %></td>
+          </tr>
+        </table>
+  <% end %>
+
+<!-- Lobby -->
+
+    <table class="col-md-12 table table-bordered">
+      <tr class="active">
+        <th>Lobby</th>
+      </tr>
+      </table>
+<!-- Welcome Board -->
+        <table class="col-md-12 table table-hover">
+          <tr class="table">
+            <td><%= image_tag "galogo_thumb.png" %></td>
+            <td><%= link_to "WELCOME TO GENERAL ASSEMBLY!", welcomeposts_path %><br><p>Post here and introduce yourself!</p></td>
+          </tr>
+        </table>
+
+<!-- Full-Time Courses -->
+
+        <table class="col-md-12 table table-bordered">
+          <tr class="active" >
+            <th>Full-Time Courses</th>
+          </tr>
+        </table>
+<!-- Web Development Immersive -->
+        <table class="col-md-12 table table-hover">
+          <tr class="table">
+            <td><%= image_tag "galogo_thumb.png" %></td>
+            <!-- <td><a href="#">Web Development Immersive</a><p>Post here about anything WDI related!</p></td> -->
+            <td><%= link_to "Web Development Immersive", wdiposts_path %><p>Post here about anything WDI related!</p></td>
+          </tr>
+<!-- User Experience Design Immersive -->
+          <tr class="table">
+            <td><%= image_tag "galogo_thumb.png" %></td>
+            <td><%= link_to "User Experience Design Immersive", uxdiposts_path %><p>Post here about anything UXDI related!</p></td>
+          </tr>
+        </table>
+
+<!-- Part-Time Courses -->
+
+        <table class="col-md-12 table table-bordered">
+          <tr class="active" >
+            <th>Part-Time Courses</th>
+          </tr>
+        </table>
+<!-- Digital Marketing -->
+        <table class="col-md-12 table table-hover">
+          <tr class="table">
+            <td><%= image_tag "galogo_thumb.png" %></td>
+            <td><%= link_to "Digital Marketing", dmposts_path %><p>Post here about anything DM related!</p></td>
+          </tr>
+<!-- Front-End Web Development -->
+          <tr class="table">
+            <td><%= image_tag "galogo_thumb.png" %></td>
+            <td><%= link_to "Front-End Web Development", fewdposts_path %><p>Post here about anything FEWD related!</p></td>
+          </tr>
+<!-- Product Management -->
+          <tr class="table">
+            <td><%= image_tag "galogo_thumb.png" %></td>
+            <td><%= link_to "Product Management", pmposts_path %><p>Post here about anything PM related!</p></td>
+          </tr>
+<!-- Data Science -->
+          <tr class="table">
+            <td><%= image_tag "galogo_thumb.png" %></td>
+            <td><%= link_to "Data Science", dsposts_path %><p>Post here about anything DS related!</p></td>
+          </tr>
+<!-- Business Development -->
+          <tr class="table">
+            <td><%= image_tag "galogo_thumb.png" %></td>
+            <td><%= link_to "Business Development and Sales", bdsposts_path %><p>Post here about anything BDS related!</p></td>
+          </tr>
+<!-- Visual Design -->
+          <tr class="table">
+            <td><%= image_tag "galogo_thumb.png" %></td>
+            <td><%= link_to "Visual Design", vdposts_path %><p>Post here about anything VD related!</p></td>
+          </tr>
+<!-- Mobile Development -->
+          <tr class="table">
+            <td><%= image_tag "galogo_thumb.png" %></td>
+            <td><%= link_to "Mobile Development", mdposts_path %><p>Post here about anything MOB related!</p></td>
+          </tr>
+<!-- User Experience Design -->
+          <tr class="table">
+            <td><%= image_tag "galogo_thumb.png" %></td>
+            <td><%= link_to "User Experience Design", uxdposts_path %></a><p>Post here about anything UXD related!</p></td>
+          </tr>
+
+<!-- Off-Topic -->
+
+          <table class="col-md-12 table table-bordered">
+          <tr class="active" >
+            <th>Off-Topic</th>
+          </tr>
+        </table>
+<!-- Everything Goes -->
+        <table class="col-md-12 table table-hover">
+          <tr class="table">
+            <td><%= image_tag "galogo_thumb.png" %></td>
+            <td><%= link_to "Talk About Everything", anyposts_path %><p>Post here about anything related to ANYTHING!</p></td>
+          </tr>
+<!-- Jobs -->
+          <tr class="table">
+            <td><%= image_tag "galogo_thumb.png" %></td>
+            <td><%= link_to "Jobs", jobposts_path %><p>Hiring? Post about it here!</p></td>
+          </tr>
+        </table>
+    </tbody>
+  </table>
+</div>

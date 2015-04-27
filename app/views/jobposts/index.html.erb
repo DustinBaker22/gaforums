@@ -1,0 +1,45 @@
+<!-- Navigation Bar -->
+<nav class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" date-toggle="collapse"data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://generalassemb.ly"><span class="red">G</span>eneral <span class="red">A</span>ssembly</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a href="/boards">Forums</a>
+        </li>
+        <li>
+          <a href="/about">About</a>
+        </li>
+        <li>
+          <a href="/contact">Contact</a>
+        </li>
+        <li><%= link_to "Logout", "/logout" %></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Header and Location -->
+<div class="container">
+  <span class="white"><h1>Jobs</h1>
+    <h3><%=link_to "Off-Topic", boards_path %> > <%= link_to "Jobs", jobposts_path %><span class="pull-right"><%= link_to "Create post", new_jobpost_path, class:"btn btn-primary" %></span></h3></span>
+
+<!-- Threads -->
+  <div class="panel panel-default">
+    <% @jobposts.each do jobpost| %>
+      <div class="panel-heading"><%= jobpost.title %><span class="pull-right"><%= link_to "  ", edit_jobpost_path(jobpost), class:"glyphicon glyphicon-pencil" %><span class="spacing"></span><%= link_to "  ", jobpost, method: :delete, data: {confirm: "Are you sure you want to delete this thread?"}, class:"glyphicon glyphicon-trash" %></span></div>
+      <div class="panel-body">
+      <%= jobpost.body %>
+    </div>
+    <% end %>
+  </div>
+</div>

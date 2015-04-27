@@ -1,0 +1,2 @@
+module WelcomepostsHelper
+end

@@ -1,0 +1,12 @@
+<!-- Thread Title -->
+<h1><%= dspost.title %></h1>
+
+<!-- Description of Thread -->
+<p><%= dspost.body %></p>
+
+<%= link_to "Edit this thread", edit_dspost_path(@dspost) %>
+
+<%= link_to "Delete this thread!",:dspost, method: :delete, data: {confirm: "Are you sure you want to delete this thread?"} %>
+
+<!-- Provide a link back to our index page -->
+<%= link_to "Back to Anything Goes", dsposts_path %>

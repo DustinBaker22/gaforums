@@ -1,0 +1,12 @@
+<!-- States the name of the bean -->
+<h1><%= anypost.title %></h1>
+
+<!-- Description of the bean -->
+<p><%= anypost.body %></p>
+
+<%= link_to "Edit this thread", edit_anypost_path(@anypost) %>
+
+<%= link_to "Delete this thread!",:anypost, method: :delete, data: {confirm: "Are you sure you want to delete this thread?"} %>
+
+<!-- Provide a link back to our index page -->
+<%= link_to "Back to Anything Goes", anyposts_path %>

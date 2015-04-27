@@ -1,0 +1,24 @@
+<div class="main">
+	<div class="container">
+		<h1 class="join">JOIN <span>GE</span>ENERAL <span>A</span>SSEMBLY</h1>
+			<form>
+				<div class="form-group">
+				<%=f.label :name %>
+					<%=f.text_field :name, class: 'form-control' %>
+				</div>
+				<div class="form-group">
+					<%=f.label :email %>
+					<%=f.email_field :email, class: 'form-control' %>
+					<label for="email">Email</label>
+					<input type="email" id="email" class="form-control">
+				</div>
+				<div class="form-group">
+					<%=f.label :password %>
+					<%=f.password_field :password, class: 'form-control' %>
+					<label for="password">Password</label>
+					<input type="password" id="password" class="form-control">
+				</div>
+			<button>Create account</button>
+		</form>
+	</div>
+</div>
